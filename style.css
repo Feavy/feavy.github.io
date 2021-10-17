@@ -1,0 +1,176 @@
+body {
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    background: black;
+}
+
+.container {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    display: inline-block;
+    box-sizing: border-box;
+    transform: skewX(-10deg);
+    overflow: hidden;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+#chibiland {
+    transition: right .33s, bottom .33s;
+    left: -10%;
+    right: 50%;
+    z-index: 10;
+}
+
+#blog {
+    transition: left .33s, top .33s;
+    left: 50%;
+    right: -10%;
+}
+
+#chibiland>h2 {
+    padding-left: 10%;
+}
+
+#blog>h2 {
+    padding-right: 10%;
+}
+
+.container>div {
+    transform: skewX(10deg);
+    transition: transform .3s, opacity .3s;
+    position: absolute;
+    left: -10%;
+    right: -10%;
+    top: 0px;
+    bottom: 0px;
+    background-size: cover;
+    background-position: center;
+}
+
+.container>h2 {
+    transform: skewX(10deg);
+    font-weight: 700;
+    font-size: 90px;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0%;
+    margin-top: 10%;
+}
+
+#chibiland>h2 {
+    font-family: 'Atma', Arial, Helvetica, sans-serif;
+    color: white;
+    text-shadow: 0px 0px 16px rgba(0, 0, 0, 0.33);
+}
+
+#blog>h2 {
+    font-family: 'Fugaz One', Arial, Helvetica, sans-serif;
+    color: #3E52B6;
+    text-shadow: 4px 4px white, -4px -4px white, 0px 0px 16px rgba(0, 0, 0, 0.33);
+}
+
+@media screen and (min-width: 900px){
+    #chibiland:hover {
+        right: 40%;
+    }
+    
+    #blog:hover {
+        left: 40%;
+        z-index: 11;;
+    }
+}
+
+.container:hover>div {
+    transform: scale(1.1) skew(10deg);
+}
+
+#chibiland>div {
+    background-image: url(chibiland.jpg);
+}
+
+#blog>div {
+    background-image: url(blog.png);
+}
+
+h1 {
+    font-family: 'Lalezar', Arial, Helvetica, sans-serif;
+    position: absolute;
+    transform: translateY(-50%) translateX(-50%);
+    text-align: center;
+    margin-top: 20vh;
+    font-size: 150px;
+    color: white;
+    z-index: 100;
+    letter-spacing: 10px;
+    font-weight: 400;
+    /* text-shadow: 4px 4px black, -4px -4px black, -4px 4px black, 4px -4px black; */
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(shadow.svg);
+    display: inline-block;
+    left: 50%;
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        transform: skewY(-5deg);
+    }
+    .container>div {
+        transform: skewY(5deg);
+        top: -10%;
+        bottom: -10%;
+        right: 0px;
+        left: 0px;
+    }
+    .container:hover>div {
+        transform: scale(1.1) skewY(5deg);
+    }
+    .container>h2 {
+        margin-top: 0;
+        top: 30%;
+        transform: skewY(5deg);
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+    #chibiland>h2 {
+        padding-left: 0;
+    }
+    #blog>h2 {
+        padding-right: 0;
+    }
+    h1 {
+        margin-top: 0;
+        left: 50%;
+        top: 50%;
+        transform: translateY(-50%) translateX(-50%)
+    }
+    #chibiland {
+        top: -10%;
+        bottom: 50%;
+        left: 0%;
+        right: 0%;
+    }
+    #blog {
+        top: 50%;
+        bottom: -10%;
+        left: 0%;
+        right: 0%;
+    }
+    #chibiland:hover {
+        bottom: 40%;
+    }
+    
+    #blog:hover {
+        top: 40%;
+        z-index: 11;
+    }
+}

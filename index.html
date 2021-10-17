@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atma:wght@700&family=Fugaz+One&family=Lalezar&display=swap" rel="stylesheet">
+    <title>FEAVY</title>
+</head>
+
+<body>
+    <a href="https://chibi.land">
+        <div class="container" id="chibiland">
+            <div>
+            </div>
+            <h2>CHIBILAND</h2>
+        </div>
+    </a>
+    <a href="https://blog.feavy.fr">
+        <div class="container" id="blog">
+            <div>
+            </div>
+            <h2>BLOG</h2>
+        </div>
+    </a>
+    <h1>FEAVY</h1>
+    <script>
+        document.getElementById("chibiland").addEventListener("mouseenter", function(e) {
+            document.getElementById("blog").firstElementChild.style.opacity = "0.7";
+        });
+        document.getElementById("chibiland").addEventListener("mouseleave", function(e) {
+            document.getElementById("blog").firstElementChild.style.opacity = "1";
+        });
+
+        document.getElementById("blog").addEventListener("mouseenter", function(e) {
+            document.getElementById("chibiland").firstElementChild.style.opacity = "0.7";
+        });
+        document.getElementById("blog").addEventListener("mouseleave", function(e) {
+            document.getElementById("chibiland").firstElementChild.style.opacity = "1";
+        });
+        setTimeout(() => {
+            window.scrollTo(0, 0);
+        }, 100);
+    </script>
+</body>
+
+</html>
