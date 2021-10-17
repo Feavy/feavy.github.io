@@ -20,14 +20,14 @@ body {
 }
 
 #chibiland {
-    transition: right .33s, bottom .33s;
+    transition: right .33s, bottom .33s, opacity .33s;
     left: -10%;
     right: 50%;
     z-index: 10;
 }
 
 #blog {
-    transition: left .33s, top .33s;
+    transition: left .33s, top .33s, opacity .33s;
     left: 50%;
     right: -10%;
 }
@@ -42,7 +42,7 @@ body {
 
 .container>div {
     transform: skewX(10deg);
-    transition: transform .3s, opacity .3s;
+    transition: transform .3s;
     position: absolute;
     left: -10%;
     right: -10%;
@@ -134,12 +134,12 @@ h1 {
         transform: scale(1.1) skewY(5deg);
     }
     .container>h2 {
-        margin-top: 0;
         top: 30%;
         transform: skewY(5deg);
         left: 0;
         right: 0;
         text-align: center;
+        font-size: 60px;
     }
     #chibiland>h2 {
         padding-left: 0;
@@ -151,7 +151,8 @@ h1 {
         margin-top: 0;
         left: 50%;
         top: 50%;
-        transform: translateY(-50%) translateX(-50%)
+        transform: translateY(-50%) translateX(-50%);
+        font-size: 100px;
     }
     #chibiland {
         top: -10%;

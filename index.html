@@ -31,17 +31,17 @@
     <h1>FEAVY</h1>
     <script>
         document.getElementById("chibiland").addEventListener("mouseenter", function(e) {
-            document.getElementById("blog").firstElementChild.style.opacity = "0.7";
+            document.getElementById("blog").style.opacity = "0.7";
         });
         document.getElementById("chibiland").addEventListener("mouseleave", function(e) {
-            document.getElementById("blog").firstElementChild.style.opacity = "1";
+            document.getElementById("blog").style.opacity = "1";
         });
 
         document.getElementById("blog").addEventListener("mouseenter", function(e) {
-            document.getElementById("chibiland").firstElementChild.style.opacity = "0.7";
+            document.getElementById("chibiland").style.opacity = "0.7";
         });
         document.getElementById("blog").addEventListener("mouseleave", function(e) {
-            document.getElementById("chibiland").firstElementChild.style.opacity = "1";
+            document.getElementById("chibiland").style.opacity = "1";
         });
         setTimeout(() => {
             window.scrollTo(0, 0);
