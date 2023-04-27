@@ -12,7 +12,8 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "sync": "node ./sync-notion.js"
   },
   "dependencies": {
     "@plasmicapp/loader-gatsby": "^1.0.250",
@@ -27,6 +28,8 @@
     "@types/react": "^18.0.38",
     "@types/react-dom": "^18.0.11",
     "@types/react-helmet": "^6.1.6",
+    "dotenv": "^16.0.3",
+    "notion-to-mdx": "^0.1.0",
     "typescript": "^5.0.4"
   }
 }
